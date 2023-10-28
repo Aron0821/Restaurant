@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: "Poppins",sans-serif;
+    transition: 0.5s;
+}
+
+.navbar { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    text-transform: uppercase;
+    background-color:  #e1b382;
+}
+
+.logo{
+    padding: 0 100px;
+    height: 100px;
+    line-height: 80px;
+}
+
+.navbar .nav-links li{
+    display: inline-block;
+    list-style: none;
+    line-height: 80px;
+}
+
+.nav-links a{
+    margin: 0px 10px;
+    right: inherit; 
+    padding: 20px;
+    height: 20rem;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.navbar .nav-links li a{
+    color: #494D5F;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+.navbar .nav-links li a:hover{
+    background: #e4decd;
+    transition: .5s;
+}
+
+
+@media(max-width:992px){
+
+.logo {
+    padding: 0;
+}
+
+.navbar .nav-links {
+    position: static;
+    max-height: none;
+    flex-direction: row;
+    background-color: transparent;
+}
+
+.nav-links a {
+    margin: 0 10px;
+    padding: 0;
+}
+
+.navbar .nav-links.show {
+    display: flex;
+    flex-direction: column;
+    background-color: #e1b382;
+    position: relative;
+}
+
+.navbar .nav-links.show a {
+    margin: 10px 0;
+}
+}
+
+.container2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px 20px 0 20x;
+    margin-top: 12rem;
+}
+
+.container2 .heading{
+    width: 50%;
+    padding-bottom: 50px;
+}
+
+.container2 .heading h3{
+    font-size: 3em;
+    font-weight: bolder;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #222;
+}
+
+.container2 .heading h3 span{
+    font-weight: 100;
+}
+
+.container2 .box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+
+.container2 .box .dream{
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+}
+
+.container2 .box .dream img{
+    width: 100%;
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+
+.container2 .box .dream img:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+
+@media(max-width:992px){
+.container2{
+    margin-top: 15rem;
+}
+
+.container2 .box{
+    flex-direction: column;
+}
+
+.container2 .box .dream{
+    width: 100%;
+}
+}
+
+
+.container3{
+    max-width:1170px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    background-color: #e1b382;
+    padding: 30px 0 0 20px;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.footer-col h2{
+    font-size: 18px;
+    color: #494D5F;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+    
+}
+
+.footer-col h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #F2F4F3;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;   
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 300;
+    color: #494D5F;
+    display: block;
+    transform: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: #e4decd;
+    pad: 8px;
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #e4decd;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #494D5F;
+    transform: all 0.3s ease;
+}
+
+.footer-col .social-links a:hover{
+    color: #e4decd;
+    background-color: #e1b382;
+}
+
+@media(max-width:992px){
+.footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+    
+}
+}
+
+@media(max-width:574px){
+    .footer-col{
+        width: 100%;
+    }
+    }

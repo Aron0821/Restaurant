@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: "Poppins",sans-serif;
+    transition: 0.5s;
+}
+
+.navbar { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    text-transform: uppercase;
+    background-color:  #e1b382;
+}
+
+.logo{
+    padding: 0 100px;
+    height: 100px;
+    line-height: 80px;
+}
+
+.navbar .nav-links li{
+    display: inline-block;
+    list-style: none;
+    line-height: 80px;
+}
+
+.nav-links a{
+    margin: 0px 10px;
+    right: inherit; 
+    padding: 20px;
+    height: 20rem;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.navbar .nav-links li a{
+    color: #494D5F;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+.navbar .nav-links li a:hover{
+    background: #e4decd;
+    transition: .5s;
+}
+
+
+@media(max-width:992px){
+
+.logo {
+    padding: 0;
+}
+
+.navbar .nav-links {
+    position: static;
+    max-height: none;
+    flex-direction: row;
+    background-color: transparent;
+}
+
+.nav-links a {
+    margin: 0 10px;
+    padding: 0;
+}
+
+.navbar .nav-links.show {
+    display: flex;
+    flex-direction: column;
+    background-color: #e1b382;
+    position: relative;
+}
+
+.navbar .nav-links.show a {
+    margin: 10px 0;
+}
+}
+
+
+
+.about{
+    width: 100%;
+    height: 100vh;
+    padding: 10px 0 0 0;
+    background-image: url(images/about_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 10rem;
+}
+
+.about .about_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative ;
+}
+
+.about .about_main .about_image img{
+    width: 750px;
+}
+
+.about .about_main .about_text h1{
+    font-size: 45px;
+    position: relative;
+    bottom:40px ;
+}
+
+.about .about_main .about_text h1 span{
+    color: #e1b382;
+    margin-left: 15px;
+}
+
+.about .about_main .about_text h3{
+    position: relative;
+    bottom: 10px;
+    font-size: 25px;
+}
+
+.about .about_main .about_text p{
+    width: 650px;
+    text-align: justify;
+    line-height: 23px;
+}
+
+.about .about_main .about_text .about_service{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.about .about_main .about_text .about_service .s_1{
+    display: flex;
+    align-items: center;
+    width: 180px;
+    background: #e4decd;
+    padding: 10px;
+    border: 2px solid #e1b382;
+    cursor: pointer;
+}
+
+.about .about_main .about_text .about_service .s_1 i{
+    color: #000;
+    margin: 5px 10px 5px 5px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.about .about_main .about_text .about_service .s_1:hover i{
+    color: #e1b382;
+}
+
+.about .about_main .about_text .about_service .s_1 a{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.about .about_main .about_text .about_btn i{
+    font-size: 15px;
+    margin-right: 8px;
+}
+
+.about .about_main .about_text .about_btn{
+    position: relative;
+    top: 35px;
+    padding: 10px 20px;
+    border: 2px solid #e1b382;
+    text-decoration: none;
+    color: #000;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.about .about_main .about_text .about_btn:hover{
+    color: #000;
+    background: #e4decd;
+}
+
+.about .about_main .about_text .about_btn::before{
+    content: '';
+    position: 0;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    background: #e1b382;
+    transition: 0.3s;
+}
+
+.about .about_main .about_text .about_btn:hover::before{
+    top: unset;
+    width: 100%;
+    bottom: 0;
+}
+
+.container3{
+    max-width:1170px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    background-color: #e1b382;
+    padding: 30px 0 0 20px;
+    margin-top: 1rem;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.footer-col h2{
+    font-size: 18px;
+    color: #494D5F;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+    
+}
+
+.footer-col h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #F2F4F3;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;   
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 300;
+    color: #494D5F;
+    display: block;
+    transform: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: #e4decd;
+    pad: 8px;
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #e4decd;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #494D5F;
+    transform: all 0.3s ease;
+}
+
+.footer-col .social-links a:hover{
+    color: #e4decd;
+    background-color: #e1b382;
+}
+
+@media(max-width:992px){
+.footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+    
+}
+
+.about .about_main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about .about_main .about_image img {
+    width: 100%; 
+    max-width: 350px; 
+}
+
+.about .about_main .about_text h1 {
+    font-size: 32px; 
+    margin-top: 0.5rem;
+    bottom: 0; 
+}
+
+.about .about_main .about_text h3 {
+    font-size: 20px; 
+    bottom: 0; 
+}
+
+.about .about_main .about_text p {
+    width: 100%; 
+    margin: 0 auto 20px auto; 
+    text-align: justify;
+    line-height: 23px;
+}
+
+.about .about_main .about_text .about_service {
+    margin-top: 20px;
+    grid-template-columns: 1fr; 
+}
+
+.about .about_main .about_text .about_service .s_1 {
+    margin-bottom: 15px; 
+}
+
+.about .about_main .about_text .about_btn {
+    top: 20px; 
+    padding: 10px 20px;
+}
+
+.about .about_main .about_text .about_btn::before {
+    top: unset;
+    width: 100%;
+    bottom: 0;
+}
+
+
+}
+
+
+@media(max-width:574px){
+    .footer-col{
+        width: 100%;
+    }
+    }

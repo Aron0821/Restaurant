@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: "Poppins",sans-serif;
+    transition: 0.5s;
+}
+
+.navbar { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    text-transform: uppercase;
+    background-color:  #e1b382;
+}
+
+.logo{
+    padding: 0 100px;
+    height: 100px;
+    line-height: 80px;
+}
+
+.navbar .nav-links li{
+    display: inline-block;
+    list-style: none;
+    line-height: 80px;
+}
+
+.nav-links a{
+    margin: 0px 10px;
+    right: inherit; 
+    padding: 20px;
+    height: 20rem;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.navbar .nav-links li a{
+    color: #494D5F;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+.navbar .nav-links li a:hover{
+    background: #e4decd;
+    transition: .5s;
+}
+
+
+@media(max-width:992px){
+
+.logo {
+    padding: 0;
+}
+
+.navbar .nav-links {
+    position: static;
+    max-height: none;
+    flex-direction: row;
+    background-color: transparent;
+}
+
+.nav-links a {
+    margin: 0 10px;
+    padding: 0;
+}
+
+.navbar .nav-links.show {
+    display: flex;
+    flex-direction: column;
+    background-color: #e1b382;
+    position: relative;
+}
+
+.navbar .nav-links.show a {
+    margin: 10px 0;
+}
+}
+
+.banner{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/banner.jpg) center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    padding-bottom: 70px;
+    margin-top: 8.7rem;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: 420px 420px;
+}
+
+.card-img{
+    background: url(images/cardimg.jpg) center/cover no-repeat;
+}
+
+.banner h2{
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.card-content{
+    background: #fff;
+    height: 330px;
+}
+
+.card-content h3{
+    text-align: center;
+    color: #000;
+    padding: 25px 0 10px 0;
+    font-size: 26px0;
+    font-weight: 500;
+}
+
+.form-row{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+form select, form input{
+    display: block;
+    width: 100%;
+    margin: 15px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-bottom: #eee;
+    font-weight: 300;
+}
+
+form input[type=text],form input[type=number],form input::placeholder,select{
+    color: #494D5F;
+}
+
+form input[type=submit]{
+    color: #fff;
+    background: #e1b382;
+    padding: 12px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type=submit]:hover{
+    opacity: 0.9;
+    background: #e4decd;
+    color: #494D5F;
+}
+@media(max-width:992px){
+
+.card-container{
+    grid-template-columns: 100%;
+}
+
+.card-img{
+    height: 330px;
+}
+}
+
+.container3{
+    max-width:1170px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    background-color: #e1b382;
+    padding: 30px 0 0 20px;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.footer-col h2{
+    font-size: 18px;
+    color: #494D5F;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+    
+}
+
+.footer-col h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #F2F4F3;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;   
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 300;
+    color: #494D5F;
+    display: block;
+    transform: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: #e4decd;
+    pad: 8px;
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #e4decd;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #494D5F;
+    transform: all 0.3s ease;
+}
+
+.footer-col .social-links a:hover{
+    color: #e4decd;
+    background-color: #e1b382;
+}
+
+@media(max-width:992px){
+.footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+    
+}
+}
+
+@media(max-width:574px){
+    .footer-col{
+        width: 100%;
+    }
+    }
